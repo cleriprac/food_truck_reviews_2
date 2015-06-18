@@ -2,11 +2,25 @@
   {{google-maps latitude="45.5210308" longitude="-122.6760842"}}
 </div>
 
-<h3>Trucks:</h3>
-{{#each truck in model}}
-<div class="each-truck">{{#link-to 'truck' truck.id}}{{truck.name}}: {{truck.description}}<br> <h6>Number of Reviews: {{truck.reviews.length}}</h6>{{/link-to}}</div>
-{{/each}}
+<div class="col-md-4">
+
+  <h3>Trucks:</h3>
+  {{#each truck in model}}
+  <div>{{#link-to 'truck' truck.id}}{{truck.name}}: {{truck.description}}<br> <h6>Number of Reviews: {{truck.reviews.length}}</h6>  {{/link-to}}</div>
+  <div class="truckImage"><img src={{truck.pictureURL}}></div>
+  {{/each}}
+
+  <!-- <button class="btn btn-default" {{action 'sortByMostRated'}}>Sort by most rated</button> -->
+  <button class="btn btn-default" {{action 'sortByName'}}>Sort by name</button>
+
+
 <hr>
-<div class="new-msg-link">{{#link-to 'trucks.new-truck'}}Add a new truck{{/link-to}}</div>
-<hr>
-{{outlet}}
+<div>{{#link-to 'trucks.new-truck'}}Add a new truck{{/link-to}}</div>
+</div>
+
+
+<div class="col-md-8">
+
+  {{outlet}}
+
+</div>

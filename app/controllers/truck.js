@@ -7,6 +7,6 @@ export default Ember.Controller.extend({
 	       this.get('model').destroyRecord();
 	       this.transitionToRoute('trucks');
 	    }
-      }
+    }
 	}
 });
