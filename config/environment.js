@@ -21,10 +21,10 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
-      'font-src': "'self'",
-      'connect-src': "'self'",
-      'img-src': "'self'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://maps.gstatic.com",
+      'font-src': "'self' https://fonts.gstatic.com",
+      'connect-src': "'self' https://maps.googleapis.com",
+      'img-src': "'self' https://maps.gstatic.com" ,
       'style-src': "'self' 'unsafe-inline'",
       'frame-src': "'none'"
     }

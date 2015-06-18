@@ -1,3 +1,7 @@
+html, body {
+    margin: 20px;
+}
+
 body {
   margin-bottom: 100px;
 }
@@ -12,5 +16,14 @@ body {
 }
 
 .reviews {
-	
+
+}
+
+#authorName {
+  color: red;
+}
+
+.map-canvas {
+  width: 800px;
+  height: 400px;
 }

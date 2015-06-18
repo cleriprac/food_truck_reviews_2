@@ -6,7 +6,7 @@
   <h4>Reviews:</h4>
 	<ul>
 	  {{#each review in model.reviews}}
-	    <p class="well reviews"><h4>{{review.review}}</h4>Rating: <br>{{review.rating}} by {{review.author}}</p>
+	    <p class="well reviews"><h4>{{review.review}}</h4>Rating: {{review.rating}}<br> by <span id="authorName">{{review.author}}</span></p>
 	    {{/each}}
 	</ul>
 </div>
