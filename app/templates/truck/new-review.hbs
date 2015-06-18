@@ -1,0 +1,7 @@
+  <h3>Add New Review</h3>
+
+  {{textarea value=review placeholder="Review" rows="5"}}
+  <br>
+  {{input type="text" placeholder="Author" value=author class="author-input"}}
+  {{view "select" content=ratings value=rating}}
+  <button {{action 'addReview'}} class="submit">Submit</button>

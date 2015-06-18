@@ -1,0 +1,8 @@
+<h3>Trucks:</h3>
+{{#each truck in model}}
+<div class="each-truck">{{#link-to 'truck' truck.id}}{{truck.name}}: {{truck.description}}{{/link-to}}</div>
+{{/each}}
+<hr>
+<div class="new-msg-link">{{#link-to 'trucks.new-truck'}}Add a new truck{{/link-to}}</div>
+<hr>
+{{outlet}}

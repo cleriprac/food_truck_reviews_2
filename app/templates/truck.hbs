@@ -1,0 +1,18 @@
+<h2>{{model.name}}</h2>
+<h4>{{model.description}}</h4>
+<button class="btn btn-danger btn-xs" {{action 'delete'}}>Delete Truck</button>
+<hr>
+<div>
+  <h4>Reviews:</h4>
+	<ul>
+	  {{#each review in model.reviews}}
+	    <p class="well reviews"><h4>{{review.review}}</h4>Rating: <br>{{review.rating}} by {{review.author}}</p>
+	    {{/each}}
+	</ul>
+</div>
+<hr>
+<div>{{#link-to 'truck.new-review'}}New Review{{/link-to}}</div>
+<hr>
+{{outlet}}
+<br>
+<hr>
